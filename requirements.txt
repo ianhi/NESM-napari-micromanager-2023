@@ -1,5 +1,4 @@
 jupyter-book
 jupyterlab
-napari[all]
-napari-animation
+napari[pyside]
 

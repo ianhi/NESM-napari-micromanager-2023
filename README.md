@@ -1,4 +1,4 @@
-# napari-workshop-template
+# NESM 2023
 
 A JupyterBook template for napari workshops.
 

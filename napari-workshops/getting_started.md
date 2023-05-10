@@ -20,13 +20,18 @@ we will make a spot detection plugin.
 
 ## Instructors
 The instructors for this workshop are
-- Name1
-- Name2
+- Ian Hunt-Isaak
+- Jason Yu
 
 ## Goals
-The aim of this workshop is to provide an introduction to bioimage analysis in
+
+The aim of this workshop is to provide an introduction to controlling microscopes
+using the `napari-micrmanager` package.
+
+
 Python and `napari`. By the end of the workshop you should be able to
 - use napari as an image viewer
+- 
 - perform interactive analysis with napari in a
   [jupyter notebook](https://jupyter.org/)
 - make use of the [napari plugin ecosystem](https://www.napari-hub.org/)
@@ -38,8 +43,17 @@ So that we can best utilize our time together, please do the following before
 arriving at the tutorial:
 
 1. Install napari and dependencies. Instructions [here](./installation.md).
-2. Download the notebooks and launch the `jupyter notebook` application.
+2. Install the latest nightly build of [Micro-Manager](https://micro-manager.org/Micro-Manager_Nightly_Builds)
+2. Download the notebooks and launch the `jupyter lab` application.
   Instructions [here](./notebook_setup.md).
+
+## Outline
+
+### Part 1
+1. Fixing installation issues
+2. 
+### Part 2
+
 
 ## Tutorial instructions
 

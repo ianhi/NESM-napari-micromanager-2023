@@ -12,12 +12,21 @@ Make sure you review the instructions below and verify that they are still
 correct before using them in your workshop.
 ```
 
+
+## Installing Micro-Manager
+
+In order for napari-micromanager to work we need the device adapaters from the Micro-Manager
+project. By far the easiest way to obtain these is to simply install Micro-Manager.
+
+To do this download and run the installer for the latest
+nightly build https://micro-manager.org/Micro-Manager_Nightly_Builds
+
 ## Installing Python using conda
 
 In this tutorial, we will install Python via miniforge, a distribution of
 Python based in the [conda package manager](https://docs.conda.io/en/latest/).
-If you already have anaconda, miniconda, or miniforge installed, those will work
-as well and you can skip to the next section.
+If you already have anaconda, miniconda, mambaforge, or miniforge installed, those
+will work as well and you can skip to the next section.
 
 1. In your web browser, navigate to the
    [miniforge page](https://github.com/conda-forge/miniforge). 
@@ -98,20 +107,20 @@ as well and you can skip to the next section.
 2. We use an environment to encapsulate the Python tools used for this workshop.
    This ensures that the requirements for this workshop do not interfere with
    your other Python projects. To create the environment (named
-   `napari-tutorial`) and install Python 3.9 in it, enter the following command:
+   `NESM-2023`) and install Python 3.9 in it, enter the following command:
 
     ```bash
-    conda create -n napari-tutorial python=3.9
+    conda create -n NESM-2023 python=3.9.16 -c conda-forge
     ```
 
 3. Once the environment setup has finished, activate the environment:
 
     ```bash
-    conda activate napari-tutorial
+    conda activate NESM-2023
     ```
 
     If you successfully activated the environment, you should now see
-   `(napari-tutorial)` to the left of your command prompt.
+   `(NESM-2023)` to the left of your command prompt.
 
 4. Install the workshop dependencies with the commands below.
 
@@ -120,15 +129,15 @@ as well and you can skip to the next section.
     ```bash
     conda install -c conda-forge notebook napari
     python -m pip install cookiecutter magicgui
-    python -m pip install stardist-napari
     ```
 
     Other systems: 
 
     ```bash
-    conda install -c conda-forge notebook
-    python -m pip install cookiecutter magicgui "napari[all]"
-    python -m pip install stardist-napari
+    conda install -c conda-forge jupyterlab ipympl mpl-interactions
+    python -m pip install cookiecutter magicgui "napari[pyside]"
+    python -m pip install git+https://github.com/pymmcore-plus/napari-micromanager
+    python -m pip install mda-simulator
     ```
 
 5. If you are on a Mac, please install this one additional dependency.
@@ -139,12 +148,12 @@ as well and you can skip to the next section.
 
 6. Test that your notebook installation is working. We will be using notebooks
    for interactive analysis. Enter the command below and it should launch the
-   `jupyter notebook` application in a web browser. Once you've confirmed it
+   `jupyter lab` application in a web browser. Once you've confirmed it
    launches, close the web browser and press `ctrl+c` in the terminal window to
    stop the notebook server.
 
     ```bash
-    jupyter notebook
+    jupyter lab
     ```
 
 7. Test your napari installation. Enter the command below and an empty napari
@@ -163,17 +172,17 @@ If you get an error at step 4 above, or can't launch `napari` after
 installation, you should try to delete your `napari-tutorial` environment, and
 follow the installation instructions below.
 
-1. Delete your `napari-tutorial` environment
+1. Delete your `NESM-2023` environment
 
    ```bash
    conda activate base
-   conda env remove -n napari-tutorial
+   conda env remove -n napari-2023
    ```
 
 2. Create your environment and install `napari` from `conda-forge`
 
    ```bash
-   conda create -y -n napari-tutorial python=3.9 napari
+   conda create -y -n napari-NESM python=3.9 napari
    ```
 
 3. Then, after creation:
@@ -182,7 +191,6 @@ follow the installation instructions below.
    conda activate napari-tutorial
    conda install -c conda-forge notebook
    pip install cookiecutter magicgui
-   pip install stardist-napari
    ```
 
 ````

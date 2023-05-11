@@ -26,8 +26,7 @@ using the `napari-micrmanager` package.
 Python and `napari`. By the end of the workshop you should be able to
 - use napari as an image viewer
 - 
-- perform interactive analysis with napari in a
-  [jupyter notebook](https://jupyter.org/)
+- perform interactive analysis with napari in [jupyter lab](https://jupyter.org/)
 - make use of the [napari plugin ecosystem](https://www.napari-hub.org/)
 - make simple plugins using the napari hookspecs
 
